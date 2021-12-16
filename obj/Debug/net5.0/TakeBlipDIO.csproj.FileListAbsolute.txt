@@ -1,0 +1,16 @@
+C:\projects\TakeBlipDIO\bin\Debug\net5.0\TakeBlipDIO.exe
+C:\projects\TakeBlipDIO\bin\Debug\net5.0\TakeBlipDIO.deps.json
+C:\projects\TakeBlipDIO\bin\Debug\net5.0\TakeBlipDIO.runtimeconfig.json
+C:\projects\TakeBlipDIO\bin\Debug\net5.0\TakeBlipDIO.runtimeconfig.dev.json
+C:\projects\TakeBlipDIO\bin\Debug\net5.0\TakeBlipDIO.dll
+C:\projects\TakeBlipDIO\bin\Debug\net5.0\ref\TakeBlipDIO.dll
+C:\projects\TakeBlipDIO\bin\Debug\net5.0\TakeBlipDIO.pdb
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\TakeBlipDIO.csproj.AssemblyReference.cache
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\TakeBlipDIO.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\TakeBlipDIO.AssemblyInfoInputs.cache
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\TakeBlipDIO.AssemblyInfo.cs
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\TakeBlipDIO.csproj.CoreCompileInputs.cache
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\TakeBlipDIO.dll
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\ref\TakeBlipDIO.dll
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\TakeBlipDIO.pdb
+C:\projects\TakeBlipDIO\obj\Debug\net5.0\TakeBlipDIO.genruntimeconfig.cache
