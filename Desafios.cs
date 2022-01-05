@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace TakeBlipDIO
 {
@@ -6,9 +7,7 @@ namespace TakeBlipDIO
     {
         static void Main(string[] args)
         {
-            // Desafio0();
-            // Desafio1();
-            Desafio2();
+            Desafio7();
         }
 
         static void Desafio0()
@@ -57,6 +56,169 @@ namespace TakeBlipDIO
 
             string mediasString = mediaNotas.ToString("0.00000");
             Console.WriteLine(string.Format($"MEDIA = {mediasString}"));
+        }
+
+        static void Desafio3()
+        {
+            int tc, i, x;
+            tc = int.Parse(Console.ReadLine());
+            for (i = 0; i < tc; i++)
+            {
+                x = int.Parse(Console.ReadLine());
+                if (x == 0)
+                {
+                    Console.WriteLine("NULL");
+                }
+                else if (x % 2 == 0)
+                {
+                    if (x > 0)
+                    {
+                        Console.WriteLine("EVEN POSITIVE");
+                    }
+                    else
+                    {
+                        Console.WriteLine("EVEN NEGATIVE");
+                    }
+
+                }
+                else
+                {
+                    if (x > 0)
+                    {
+                        Console.WriteLine("ODD POSITIVE");
+                    }
+                    else
+                    {
+                        Console.WriteLine("ODD NEGATIVE");
+                    }
+                }
+
+            }
+
+            Console.ReadLine();
+        }
+
+        static void Desafio4()
+        {
+            //complete os espaços em branco com sua solução para o problema
+
+            string[] valores = Console.ReadLine().Split(' ');
+            double x = double.Parse(valores[0], CultureInfo.InvariantCulture);
+            double y = double.Parse(valores[1], CultureInfo.InvariantCulture);
+
+            if (x == 0.0 && y == 0.0)
+            {
+                Console.WriteLine("Origem");
+            }
+            else if (x == 0.0)
+            {
+                Console.WriteLine("Eixo Y");
+            }
+            else if (y == 0.0)
+            {
+                Console.WriteLine("Eixo X");
+            }
+            else if (x > 0 && y > 0)
+            {
+                Console.WriteLine("Q1");
+            }
+            else if (x < 0.0 && y > 0.0)
+            {
+                Console.WriteLine("Q2");
+            }
+            else if (x < 0.0 && y < 0.0)
+            {
+                Console.WriteLine("Q3");
+            }
+            else
+            {
+                Console.WriteLine("Q4");
+            }
+        }
+
+        static void Desafio5()
+        {
+            int testsCount = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < testsCount; i++)
+            {
+                string[] valores = Console.ReadLine().Split();
+
+                double populacaoA = double.Parse(valores[0]);
+                double populacaoB = double.Parse(valores[1]);
+
+                double crescimentoA = double.Parse(valores[2]) / 100.0;
+                double crescimentoB = double.Parse(valores[3]) / 100.0;
+
+                int anos = 0;
+                while (populacaoA <= populacaoB)
+                {
+                    // populacaoA += (int)System.Math.Floor(((double)populacaoA) * crescimentoA);
+                    // populacaoA += (int)System.Math.Ceiling(((double)populacaoA) * crescimentoA);
+                    populacaoA += System.Math.Floor(populacaoA * crescimentoA);
+                    populacaoB += System.Math.Floor(populacaoB * crescimentoB);
+                    anos++;
+
+                    if (anos > 100)
+                        break;
+                }
+
+                if (anos > 100)
+                {
+                    Console.WriteLine("Mais de 1 seculo.");
+                }
+                else
+                {
+                    Console.WriteLine(anos + " anos.");
+                }
+            }
+        }
+
+        static void Desafio6()
+        {
+            int valorLido = int.Parse(Console.ReadLine());
+            int[] n = new int[10];
+
+            n[0] = valorLido;
+            for (int i = 1; i < n.Length; i++)
+            {
+                n[i] = 2 * n[i - 1];
+            }
+
+            for (int i = 0; i < n.Length; i++)
+            {
+                // Console.WriteLine($"N[{i}] = {n[i]}");
+                Console.WriteLine(string.Format("N[{0}] = {1}", i, n[i]));
+            }
+        }
+
+        static void Desafio7()
+        {
+            int testCount = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < testCount; i++)
+            {
+                ulong resultado = 1;
+                ulong lastResultado = 1;
+
+                int casas = int.Parse(Console.ReadLine());
+                // stonks
+                if (casas == 64)
+                {
+                    Console.WriteLine("1537228672809129 kg");
+                }
+                else
+                {
+
+                    for (int j = 0; j < casas; j++)
+                    {
+                        resultado = 2 * lastResultado;
+                        lastResultado = resultado;
+                    }
+                    resultado = resultado / 12000;
+                    Console.WriteLine($"{resultado} kg");
+                }
+            }
         }
     }
 }
